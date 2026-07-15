@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function PortfolioPage() {
   const projects = [
-    { title: "Featured Campaign 1", slug: "campaign-1", client: "BrandEx Media", image: "/Screenshot 2026-07-15 223705.png" },
-    { title: "Featured Campaign 2", slug: "campaign-2", client: "BrandEx Media", image: "/Screenshot 2026-07-15 223711.png" },
-    { title: "Featured Campaign 3", slug: "campaign-3", client: "BrandEx Media", image: "/Screenshot 2026-07-15 223720.png" },
-    { title: "Featured Campaign 4", slug: "campaign-4", client: "BrandEx Media", image: "/Screenshot 2026-07-15 223727.png" },
+    { title: "Premium Poster Making", slug: "premium-posters", client: "Visuals that stop the scroll and demand attention.", image: "/Screenshot 2026-07-15 223705.png" },
+    { title: "Product Shoot", slug: "product-shoot", client: "Showcase your offerings with stunning clarity and precision.", image: "/Screenshot 2026-07-15 223711.png" },
+    { title: "Professional Reel Making", slug: "professional-reels", client: "Cinematic short-form content built for viral growth.", image: "/Screenshot 2026-07-15 223720.png" },
+    { title: "Model Shoots", slug: "model-shoots", client: "Bringing your brand's lifestyle and aesthetic to life.", image: "/Screenshot 2026-07-15 223727.png" },
   ];
 
   return (

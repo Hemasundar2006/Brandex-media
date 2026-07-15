@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-accent: #C4E86D;
+  --color-background-center: #0F5132;
+  --color-background-outer: #050805;
+  --color-brand-mid: #1B7A4D;
+  --color-brand-border: #8FA396;
+  --color-foreground-muted: #E5E5E5;
+}
+
+body {
+  color: white;
+  background: radial-gradient(circle at center, var(--color-background-center) 0%, var(--color-background-outer) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}

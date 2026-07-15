@@ -4,22 +4,30 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const screenshots = [
-    "/Screenshot 2026-07-09 010314.png",
-    "/Screenshot 2026-07-09 010405.png",
-    "/Screenshot 2026-07-09 010411.png",
-    "/Screenshot 2026-07-09 010419.png",
-    "/Screenshot 2026-07-09 010425.png",
-    "/Screenshot 2026-07-09 010441.png",
-    "/Screenshot 2026-07-09 010448.png",
-    "/Screenshot 2026-07-09 010528.png",
-    "/Screenshot 2026-07-09 010539.png",
-    "/Screenshot 2026-07-09 010556.png",
-    "/Screenshot 2026-07-09 010703.png",
-    "/Screenshot 2026-07-09 010711.png",
-    "/Screenshot 2026-07-09 010722.png",
-    "/Screenshot 2026-07-09 010731.png",
-    "/Screenshot 2026-07-09 010737.png",
-    "/Screenshot 2026-07-09 010744.png",
+    "/IMG_1710.PNG",
+    "/IMG_1895.JPG.jpeg",
+    "/IMG_2201.JPG.jpeg",
+    "/IMG_2202.JPG.jpeg",
+    "/IMG_2249.JPG.jpeg",
+    "/IMG_2250.JPG.jpeg",
+    "/IMG_3769.JPG.jpeg",
+    "/IMG_3795.PNG",
+    "/IMG_4243.HEIC",
+    "/IMG_4906.PNG",
+    "/IMG_5385.PNG",
+    "/IMG_6456 (1).PNG",
+    "/IMG_6456.PNG",
+    "/IMG_6457.JPG (1).jpeg",
+    "/IMG_6457.JPG.jpeg",
+    "/IMG_6458.JPG.jpeg",
+    "/IMG_6459 (1).PNG",
+    "/IMG_6459.PNG",
+    "/IMG_6870 (1).PNG",
+    "/IMG_6870.PNG",
+    "/IMG_6991.PNG",
+    "/IMG_6992.PNG",
+    "/IMG_6998.PNG",
+    "/IMG_7020.PNG"
   ];
 
   // We duplicate the array to create a seamless infinite loop
@@ -59,7 +67,7 @@ export default function Projects() {
               <img
                 src={src}
                 alt={`Project ${idx}`}
-                className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-300"
+                className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity md:grayscale md:hover:grayscale-0 duration-300"
               />
             </div>
           ))}

@@ -64,6 +64,7 @@ export default function Header() {
         </Link>
 
         <button
+          suppressHydrationWarning
           onClick={() => setMenuOpen(!menuOpen)}
           className="relative z-50 p-2 text-white hover:text-brand-accent transition-colors"
         >

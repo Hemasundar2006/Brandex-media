@@ -1,4 +1,5 @@
 import { MapPin, Mail, Phone } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Contact Us | BrandEx Media",
@@ -52,23 +53,7 @@ export default function ContactPage() {
 
         <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
           <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-          <form className="flex flex-col gap-6">
-            <div>
-              <label className="block text-white/70 text-sm mb-2">Name</label>
-              <input type="text" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-brand-accent transition-colors" />
-            </div>
-            <div>
-              <label className="block text-white/70 text-sm mb-2">Email</label>
-              <input type="email" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-brand-accent transition-colors" />
-            </div>
-            <div>
-              <label className="block text-white/70 text-sm mb-2">Message</label>
-              <textarea rows={4} className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-brand-accent transition-colors resize-none" />
-            </div>
-            <button type="button" className="w-full bg-brand-mid hover:bg-brand-mid/90 text-white font-bold py-4 rounded-xl transition-colors">
-              Submit Inquiry
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </main>

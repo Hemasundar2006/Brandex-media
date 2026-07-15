@@ -36,7 +36,7 @@ export default function PortfolioPage() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
                 <h2 className="text-2xl font-bold text-white group-hover:text-brand-accent transition-colors">{proj.title}</h2>
-                <p className="text-foreground-muted text-sm mt-1">Client: {proj.client}</p>
+                <p className="text-foreground-muted text-sm mt-1">{proj.client}</p>
               </div>
             </Link>
           ))}

@@ -34,22 +34,25 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4 flex justify-between items-center ${
-          scrolled ? "bg-background-outer/80 backdrop-blur-md border-b border-white/10 py-3" : "bg-transparent py-6"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4 flex justify-between items-center ${scrolled ? "bg-background-outer/80 backdrop-blur-md border-b border-white/10 py-3" : "bg-transparent py-6"
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
       >
         <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-          {/* Logo - user should place the provided white logo at /logo-white.png in the public folder */}
-          <div className="relative w-32 h-10 flex items-center">
-            <Image 
-              src="/IMG_6459.PNG" 
-              alt="BrandEx Media" 
-              fill
-              className="object-contain opacity-100 transition-opacity z-10" 
-            />
+          <div className="flex flex-col items-start relative">
+            <div className="relative w-32 h-10 flex items-center">
+              <Image
+                src="/IMG_6459.PNG"
+                alt="BrandEx Media"
+                fill
+                className="object-contain opacity-100 transition-opacity z-10"
+              />
+            </div>
+            <span className="text-[6px] text-brand-accent tracking-[0.1em] font-bold uppercase absolute -bottom-2 right-3">
+              IND |  USA
+            </span>
           </div>
           <motion.div
             className="text-white group-hover:text-brand-accent ml-2"
@@ -60,7 +63,7 @@ export default function Header() {
           </motion.div>
         </Link>
 
-        <button 
+        <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="relative z-50 p-2 text-white hover:text-brand-accent transition-colors"
         >
@@ -119,8 +122,8 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            
-            <motion.div 
+
+            <motion.div
               className="absolute bottom-12 flex gap-8 text-white/50 text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

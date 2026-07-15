@@ -4,28 +4,17 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const screenshots = [
+    "/IMG_6459.PNG",
     "/IMG_1710.PNG",
     "/IMG_1895.JPG.jpeg",
     "/IMG_2201.JPG.jpeg",
-    "/IMG_2202.JPG.jpeg",
     "/IMG_2249.JPG.jpeg",
     "/IMG_2250.JPG.jpeg",
     "/IMG_3769.JPG.jpeg",
     "/IMG_3795.PNG",
     "/IMG_4243.HEIC",
-    "/IMG_4906.PNG",
     "/IMG_5385.PNG",
-    "/IMG_6456 (1).PNG",
-    "/IMG_6456.PNG",
     "/IMG_6457.JPG (1).jpeg",
-    "/IMG_6457.JPG.jpeg",
-    "/IMG_6458.JPG.jpeg",
-    "/IMG_6459 (1).PNG",
-    "/IMG_6459.PNG",
-    "/IMG_6870 (1).PNG",
-    "/IMG_6870.PNG",
-    "/IMG_6991.PNG",
-    "/IMG_6992.PNG",
     "/IMG_6998.PNG",
     "/IMG_7020.PNG"
   ];

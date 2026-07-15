@@ -39,17 +39,18 @@ export default function Work() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Swipeable Carousel Container */}
+        <div className="flex overflow-x-auto gap-6 md:gap-10 pb-12 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {projects.map((proj, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group cursor-pointer flex flex-col"
+              className="group cursor-pointer flex flex-col flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] snap-center"
             >
-              <div className="aspect-[4/5] md:aspect-video bg-white/5 border border-white/10 rounded-2xl mb-6 group-hover:border-brand-accent/50 transition-colors flex items-center justify-center overflow-hidden relative shadow-xl">
+              <div className="aspect-[4/5] md:aspect-[4/5] bg-white/5 border border-white/10 rounded-2xl mb-6 group-hover:border-brand-accent/50 transition-colors flex items-center justify-center overflow-hidden relative shadow-xl">
                 <img 
                   src={proj.image} 
                   alt={proj.title} 
@@ -57,17 +58,22 @@ export default function Work() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background-outer/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
               </div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-brand-accent transition-colors">{proj.title}</h3>
-              <p className="text-foreground-muted text-base mt-2">{proj.tagline}</p>
+              <h3 
+                className="text-2xl md:text-3xl font-extrabold text-white group-hover:text-brand-accent transition-colors tracking-tight"
+              >
+                {proj.title}
+              </h3>
+              <p className="text-foreground-muted text-sm md:text-base mt-2 font-medium leading-relaxed">{proj.tagline}</p>
             </motion.div>
           ))}
         </div>
         
         <div className="mt-16 text-center">
-          <Link href="/portfolio">
-            <button className="px-8 py-4 bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-background-outer rounded-full font-semibold transition-all duration-300">
-              View Full Portfolio
-            </button>
+          <Link 
+            href="/portfolio"
+            className="inline-block px-8 py-4 bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-background-outer rounded-full font-semibold transition-all duration-300"
+          >
+            View Full Portfolio
           </Link>
         </div>
       </div>

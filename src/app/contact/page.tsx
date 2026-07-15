@@ -19,13 +19,17 @@ export default function ContactPage() {
           </p>
           
           <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-brand-accent">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 flex-shrink-0 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-brand-accent">
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="text-white font-medium">Visit Us</h3>
-                <p className="text-foreground-muted">123 Creative Blvd, New York, NY 10001</p>
+                <p className="text-foreground-muted">
+                  43-20-31/49-20-31, Beside the Bata Showroom in TSN Colony,<br/>
+                  Ground Floor, Hotel Sinka Grand,<br/>
+                  Dondaparthi, Visakhapatnam, Andhra Pradesh – 530016
+                </p>
               </div>
             </div>
             
@@ -39,13 +43,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-brand-accent">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 flex-shrink-0 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-brand-accent">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="text-white font-medium">Call Us</h3>
-                <p className="text-foreground-muted">+1 (555) 123-4567</p>
+                <p className="text-foreground-muted">
+                  +91 9494835771 <br/>
+                  +91 7995138462
+                </p>
               </div>
             </div>
           </div>

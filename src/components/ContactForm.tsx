@@ -15,7 +15,7 @@ export default function ContactForm() {
     
     // Use the desired WhatsApp number (with country code, no plus sign or spaces)
     // Example: 919876543210 for India
-    const phoneNumber = "919000000000"; // PLEASE UPDATE THIS
+    const phoneNumber = "919010205771";
     
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
     

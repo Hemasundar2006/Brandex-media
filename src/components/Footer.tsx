@@ -14,14 +14,29 @@ export default function Footer() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("loading");
-    // Simulate network request
+    
+    // Get form values
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+
+    // Simulate small delay for the animation, then open WhatsApp
     setTimeout(() => {
       setFormState("success");
+      
+      const whatsappMessage = `*New Inquiry from Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
+      const phoneNumber = "919010205771";
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+
       // Reset form state after success
       setTimeout(() => {
         setFormState("idle");
+        form.reset();
       }, 3000);
-    }, 1500);
+    }, 800);
   };
 
   const formVariants: Variants = {

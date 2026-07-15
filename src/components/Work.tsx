@@ -27,28 +27,37 @@ export default function Work() {
     },
   ];
 
+  const duplicatedProjects = [...projects, ...projects];
+
   return (
     <section className="w-full py-24 bg-background-outer relative border-t border-white/5 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-brand-accent">Work</span>
-          </h2>
-          <p className="text-foreground-muted text-lg max-w-2xl mx-auto">
-            Case studies and results from our most successful campaigns.
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto px-6 mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Our <span className="text-brand-accent">Work</span>
+        </h2>
+        <p className="text-foreground-muted text-lg max-w-2xl mx-auto">
+          Case studies and results from our most successful campaigns.
+        </p>
+      </div>
 
-        {/* Swipeable Carousel Container */}
-        <div className="flex overflow-x-auto gap-6 md:gap-10 pb-12 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          {projects.map((proj, index) => (
-            <motion.div 
+      {/* Infinite Looping Carousel Container */}
+      <div className="relative w-full flex overflow-hidden group pb-12">
+        {/* Left fade gradient */}
+        <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-background-outer to-transparent z-10 pointer-events-none" />
+
+        <motion.div
+          className="flex gap-6 md:gap-10 px-4"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 25,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {duplicatedProjects.map((proj, index) => (
+            <div 
               key={index}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group cursor-pointer flex flex-col flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] snap-center"
+              className="group cursor-pointer flex flex-col flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] group-hover:[animation-play-state:paused]"
             >
               <div className="aspect-[4/5] md:aspect-[4/5] bg-white/5 border border-white/10 rounded-2xl mb-6 group-hover:border-brand-accent/50 transition-colors flex items-center justify-center overflow-hidden relative shadow-xl">
                 <img 
@@ -64,17 +73,25 @@ export default function Work() {
                 {proj.title}
               </h3>
               <p className="text-foreground-muted text-sm md:text-base mt-2 font-medium leading-relaxed">{proj.tagline}</p>
-            </motion.div>
+            </div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <Link 
-            href="/portfolio"
-            className="inline-block px-8 py-4 bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-background-outer rounded-full font-semibold transition-all duration-300"
-          >
-            View Full Portfolio
-          </Link>
+        </motion.div>
+
+        {/* Right fade gradient */}
+        <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-background-outer to-transparent z-10 pointer-events-none" />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="w-full max-w-sm mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+          <video 
+            src="/IMG_0785.MP4" 
+            controls
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="w-full h-auto aspect-[9/16] object-cover bg-black"
+          />
         </div>
       </div>
     </section>

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Send, Loader2, Check } from "lucide-react";
+import { Send, Loader2, Check, ArrowUpRight, Instagram, Twitter, Linkedin, Facebook, MapPin, Mail, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -204,8 +205,8 @@ export default function Footer() {
       >
         <p>© 2026 BrandEx Media. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <Link href="/privacy-policy" title="Privacy Policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/terms" title="Terms of Service" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
       </motion.div>
     </footer>

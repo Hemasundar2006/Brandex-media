@@ -40,7 +40,7 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
       >
-        <Link href="/" className="flex items-center gap-2 group cursor-pointer">
+        <Link href="/" title="BrandEx Media Home" className="flex items-center gap-2 group cursor-pointer">
           <div className="flex flex-col items-start relative">
             <div className="relative w-32 h-10 flex items-center">
               <Image

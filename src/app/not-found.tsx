@@ -12,7 +12,7 @@ export default function NotFound() {
         The page you are looking for doesn't exist or has been moved. Let's get you back on track.
       </p>
       
-      <Link href="/" className="inline-flex items-center gap-3 px-8 py-4 bg-brand-mid hover:bg-brand-mid/80 text-white font-bold rounded-xl transition-colors">
+      <Link href="/" title="Return to Home" className="inline-flex items-center gap-3 px-8 py-4 bg-brand-mid hover:bg-brand-mid/80 text-white font-bold rounded-xl transition-colors">
         Return Home <ArrowRight className="w-5 h-5" />
       </Link>
     </main>

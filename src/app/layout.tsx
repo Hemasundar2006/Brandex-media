@@ -11,8 +11,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.brandexmarketing.in"),
   title: "BrandEx Media | The Best Content Creator",
-  description: "Modern creative media and digital marketing agency.",
+  description: "BrandEx Media is a modern creative media and digital marketing agency based in IND and USA. We specialize in digital growth, branding, and content creation.",
+  keywords: ["BrandEx Media", "digital marketing agency", "content creation", "branding", "SEO", "social media marketing", "video production", "creative media"],
+  authors: [{ name: "BrandEx Media" }],
+  publisher: "BrandEx Media",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Send, Loader2, Check, ArrowUpRight, Instagram, Twitter, Linkedin, Facebook, MapPin, Mail, Phone } from "lucide-react";
+import { Send, Loader2, Check } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {

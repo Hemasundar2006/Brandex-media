@@ -1,112 +1,169 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
-import { User } from "lucide-react";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
+import { Search, Compass, Film, Share2, Rocket } from "lucide-react";
 
 export default function Steps() {
-  const lineVariants: Variants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: { 
-      pathLength: 1, 
-      opacity: 1, 
-      transition: { duration: 1.5, ease: "easeInOut" }
-    }
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"],
+  });
 
-  const nodeVariants: Variants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: (custom: number) => ({ 
-      scale: 1, 
-      opacity: 1,
-      transition: { 
-        duration: 0.5, 
-        type: "spring", 
-        stiffness: 200,
-        delay: custom * 0.5 // Stagger based on custom index
-      }
-    })
-  };
+  const steps = [
+    {
+      phase: "01",
+      title: "Discover",
+      subtitle: "Understand & Audit",
+      desc: "Comprehensive immersion into your brand DNA, target market psychology, competitor analysis, and growth obstacles.",
+      icon: <Search className="w-5 h-5 text-brand-accent" />,
+    },
+    {
+      phase: "02",
+      title: "Strategize",
+      subtitle: "Creative Roadmap",
+      desc: "Formulating the narrative angle, visual style guidelines, content distribution calendar, and performance targets.",
+      icon: <Compass className="w-5 h-5 text-brand-accent" />,
+    },
+    {
+      phase: "03",
+      title: "Create",
+      subtitle: "Studio Production",
+      desc: "Deploying high-end cameras, lighting, and art direction to produce cinematic commercials, viral reels, and custom web assets.",
+      icon: <Film className="w-5 h-5 text-brand-accent" />,
+    },
+    {
+      phase: "04",
+      title: "Amplify",
+      subtitle: "Targeted Distribution",
+      desc: "Distributing your creative assets through precision Meta advertising, influencer partnerships, and organic social algorithms.",
+      icon: <Share2 className="w-5 h-5 text-brand-accent" />,
+    },
+    {
+      phase: "05",
+      title: "Grow",
+      subtitle: "Measure & Scale",
+      desc: "Continuous conversion tracking, data analysis, and iterative scaling to compound reach, brand loyalty, and revenue.",
+      icon: <Rocket className="w-5 h-5 text-brand-accent" />,
+    },
+  ];
 
   return (
-    <section className="w-full py-12 md:py-24 flex justify-center px-6 overflow-hidden">
-      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <div className="md:w-1/2 text-center md:text-left">
-          <motion.h3 
-            className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8 }}
-          >
-            The Journey to <br/>
-            <span className="text-brand-accent">Success</span>
-          </motion.h3>
-          <motion.p
-            className="text-foreground-muted text-lg font-light"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            We take your brand step by step to the pinnacle of digital excellence. 
-            Every stage is carefully calculated to maximize impact and ROI.
-          </motion.p>
+    <section
+      ref={containerRef}
+      className="w-full py-28 md:py-40 bg-background-center/30 relative overflow-hidden border-t border-white/5"
+      id="process"
+    >
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center md:text-left mb-20 md:mb-28">
+          <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+            <span className="w-8 h-[1.5px] bg-brand-accent" />
+            <span className="text-xs font-mono uppercase tracking-[0.25em] text-brand-accent font-semibold">
+              // Execution Methodology
+            </span>
+          </div>
+          <h2 className="font-oswald text-5xl sm:text-7xl md:text-8xl font-bold text-white uppercase tracking-tight mb-4">
+            YOUR BRAND <span className="text-brand-accent">JOURNEY</span>
+          </h2>
+          <p className="text-foreground-muted text-base md:text-xl max-w-2xl font-light leading-relaxed">
+            A battle-tested 5-stage framework that transforms ambitious concepts into market-dominating brands.
+          </p>
         </div>
 
-        {/* The Steps Graphic */}
-        <div className="md:w-1/2 flex justify-center relative w-full max-w-sm mx-auto md:max-w-none pb-12">
-          <motion.svg
-            viewBox="0 0 300 400"
-            fill="none"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="w-full max-w-[250px] md:max-w-[300px] h-auto overflow-visible"
-          >
-            {/* The Climbing Path */}
-            <motion.path
-              d="M 50 350 L 50 250 L 150 250 L 150 150 L 250 150 L 250 50 L 280 80 M 250 50 L 220 80"
-              stroke="#1B7A4D"
-              strokeWidth="6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              variants={lineVariants}
-            />
+        {/* --- DESKTOP HORIZONTAL TIMELINE --- */}
+        <div className="hidden lg:block relative pt-12 pb-16">
+          {/* Base Inactive Track */}
+          <div className="absolute top-[88px] left-8 right-8 h-[2px] bg-white/10" />
 
-            {/* Node 1 */}
-            <motion.circle cx="50" cy="350" r="8" fill="#C4E86D" variants={nodeVariants} custom={0} />
-            <motion.text x="70" y="340" fill="white" fontSize="14" fontWeight="bold" variants={nodeVariants} custom={0}>1. Brand Audit</motion.text>
-            <motion.text x="70" y="358" fill="#A3A3A3" fontSize="11" variants={nodeVariants} custom={0}>Deep dive into</motion.text>
-            <motion.text x="70" y="372" fill="#A3A3A3" fontSize="11" variants={nodeVariants} custom={0}>BrandEx strategy</motion.text>
-
-            {/* Node 2 - Positioned bottom-right to avoid the line */}
-            <motion.circle cx="150" cy="250" r="8" fill="#C4E86D" variants={nodeVariants} custom={1} />
-            <motion.text x="165" y="265" fill="white" fontSize="14" fontWeight="bold" variants={nodeVariants} custom={1}>2. Execution</motion.text>
-            <motion.text x="165" y="283" fill="#A3A3A3" fontSize="11" variants={nodeVariants} custom={1}>Targeted reels &</motion.text>
-            <motion.text x="165" y="297" fill="#A3A3A3" fontSize="11" variants={nodeVariants} custom={1}>custom posters</motion.text>
-
-            {/* Node 3 - Positioned top-left to avoid the line */}
-            <motion.circle cx="250" cy="150" r="8" fill="#C4E86D" variants={nodeVariants} custom={2} />
-            <motion.text x="235" y="110" fill="white" fontSize="14" fontWeight="bold" textAnchor="end" variants={nodeVariants} custom={2}>3. Scaling</motion.text>
-            <motion.text x="235" y="128" fill="#A3A3A3" fontSize="11" textAnchor="end" variants={nodeVariants} custom={2}>Total market</motion.text>
-            <motion.text x="235" y="142" fill="#A3A3A3" fontSize="11" textAnchor="end" variants={nodeVariants} custom={2}>dominance</motion.text>
-          </motion.svg>
-
-          {/* Floating Person/Icon Element */}
+          {/* Animated Brand Progress Track */}
           <motion.div
-            className="absolute top-4 right-12 bg-white/10 backdrop-blur-md p-4 rounded-full border border-white/20 text-brand-accent shadow-[0_0_30px_rgba(196,232,109,0.2)]"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 1.5, duration: 0.5, type: "spring" }}
-          >
-            <motion.div
-              animate={{ y: [-4, 4, -4] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            >
-              <User className="w-8 h-8" />
-            </motion.div>
-          </motion.div>
+            className="absolute top-[88px] left-8 right-8 h-[2px] bg-brand-accent origin-left shadow-[0_0_15px_rgba(196,232,109,0.7)]"
+            style={{ scaleX: scrollYProgress }}
+          />
+
+          {/* 5 Step Nodes */}
+          <div className="grid grid-cols-5 gap-6 relative z-10">
+            {steps.map((step, i) => (
+              <motion.div
+                key={step.phase}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.12 }}
+                className="flex flex-col items-center text-center px-2 group"
+              >
+                {/* Node Icon Box */}
+                <div className="w-14 h-14 rounded-2xl bg-background-outer border-2 border-white/20 flex items-center justify-center mb-6 group-hover:border-brand-accent group-hover:shadow-[0_0_25px_rgba(196,232,109,0.5)] transition-all duration-400 bg-background-outer relative z-20">
+                  {step.icon}
+                </div>
+
+                {/* Step Marker */}
+                <span className="font-mono text-xs text-brand-accent font-bold tracking-widest uppercase mb-1">
+                  PHASE {step.phase}
+                </span>
+
+                <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-1 group-hover:text-brand-accent transition-colors">
+                  {step.title}
+                </h3>
+
+                <p className="text-xs font-mono uppercase tracking-wider text-white/50 mb-3 font-semibold">
+                  {step.subtitle}
+                </p>
+
+                <p className="text-xs text-foreground-muted leading-relaxed font-light">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* --- MOBILE VERTICAL TIMELINE --- */}
+        <div className="lg:hidden relative pl-6 pb-8">
+          {/* Vertical Inactive Base Track */}
+          <div className="absolute top-4 bottom-4 left-6 w-[2px] bg-white/10" />
+
+          {/* Vertical Animated Track */}
+          <motion.div
+            className="absolute top-4 bottom-4 left-6 w-[2px] bg-brand-accent origin-top shadow-[0_0_15px_rgba(196,232,109,0.6)]"
+            style={{ scaleY: scrollYProgress }}
+          />
+
+          <div className="flex flex-col gap-10">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.phase}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-10 flex flex-col"
+              >
+                {/* Vertical Node Icon */}
+                <div className="absolute -left-[17px] top-0 w-9 h-9 rounded-xl bg-background-outer border-2 border-brand-accent flex items-center justify-center shadow-[0_0_15px_rgba(196,232,109,0.4)] z-10">
+                  {step.icon}
+                </div>
+
+                <span className="font-mono text-xs text-brand-accent font-bold tracking-widest uppercase mb-0.5">
+                  PHASE {step.phase}
+                </span>
+
+                <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-0.5">
+                  {step.title}
+                </h3>
+
+                <p className="text-xs font-mono uppercase tracking-wider text-white/50 mb-2 font-medium">
+                  {step.subtitle}
+                </p>
+
+                <p className="text-sm text-foreground-muted leading-relaxed font-light">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

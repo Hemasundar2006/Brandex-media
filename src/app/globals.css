@@ -2,17 +2,106 @@
 
 @theme {
   --color-brand-accent: #C4E86D;
+  --color-brand-accent-glow: rgba(196, 232, 109, 0.4);
   --color-background-center: #0F5132;
   --color-background-outer: #050805;
   --color-brand-mid: #1B7A4D;
+  --color-brand-dark: #0A2E1C;
   --color-brand-border: #8FA396;
+  --color-brand-border-subtle: rgba(143, 163, 150, 0.2);
   --color-foreground-muted: #E5E5E5;
+  --color-foreground-dim: #9EABA2;
+  --font-display: var(--font-display), 'Syne', sans-serif;
+  --font-sans: var(--font-sans), 'Plus Jakarta Sans', sans-serif;
+  --font-oswald: var(--font-display), 'Syne', sans-serif;
+  --font-inter: var(--font-sans), 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+  --brand-primary: #C4E86D;
+  --brand-secondary: #1B7A4D;
+  --brand-center: #0F5132;
+  --brand-outer: #050805;
+  --brand-border: #8FA396;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  color: white;
-  background: radial-gradient(circle at center, var(--color-background-center) 0%, var(--color-background-outer) 100%);
+  color: #FFFFFF;
+  background: radial-gradient(ellipse at 50% 20%, var(--color-background-center) 0%, var(--color-background-outer) 75%);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--color-brand-accent);
+  color: #050805;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050805;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B7A4D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4E86D;
+}
+
+/* Glassmorphic Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(196, 232, 109, 0.35);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(196, 232, 109, 0.08);
+}
+
+/* Hide scrollbar for clean horizontal snap lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Outlined Display Text Effect */
+.stroke-brand {
+  -webkit-text-stroke: 1.5px var(--color-brand-accent);
+  color: transparent;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

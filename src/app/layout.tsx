@@ -180,21 +180,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
 
         <CustomCursor />
-        {/* Google tag (gtag.js) - G-TYVDN56BNJ */}
+        {/* Google tag (gtag.js) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-TYVDN56BNJ"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18435565332"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics-tyvdn56bnj" strategy="afterInteractive">
+        <Script id="google-tag-aw-18435565332" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-TYVDN56BNJ');
+
+            gtag('config', 'AW-18435565332');
           `}
         </Script>
 
-        {/* Google tag (gtag.js) - G-TVGCM10V91 */}
+        {/* Google tag (gtag.js) - Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TVGCM10V91"
           strategy="afterInteractive"
@@ -204,21 +205,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-TVGCM10V91');
-          `}
-        </Script>
 
-        {/* Google tag (gtag.js) - AW-18435565332 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18435565332"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-aw18435565332" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18435565332');
+            gtag('config', 'G-TVGCM10V91');
           `}
         </Script>
 

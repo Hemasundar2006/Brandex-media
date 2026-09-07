@@ -180,16 +180,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
 
         <CustomCursor />
+        {/* Google tag (gtag.js) - G-TYVDN56BNJ */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TYVDN56BNJ"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics-tyvdn56bnj" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-TYVDN56BNJ');
+          `}
+        </Script>
+
+        {/* Google tag (gtag.js) - G-TVGCM10V91 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TVGCM10V91"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-tvgcm10v91" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TVGCM10V91');
+          `}
+        </Script>
+
+        {/* Google tag (gtag.js) - AW-18435565332 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18435565332"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-aw18435565332" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18435565332');
           `}
         </Script>
 

@@ -83,7 +83,7 @@ export default function ContactPage() {
                     href="mailto:hello@brandexmedia.com"
                     className="text-sm text-brand-accent hover:underline font-mono mt-0.5 inline-block"
                   >
-                    hello@brandexmedia.com
+                    teambrandexmedia@gmail.com
                   </a>
                 </div>
               </div>
@@ -116,10 +116,8 @@ export default function ContactPage() {
               </div>
 
               <p className="text-sm text-white/70 font-mono leading-relaxed pl-15">
-                43-20-31/49-20-31, Beside the Bata Showroom in TSN Colony, <br />
-                Ground Floor, Hotel Sinka Grand, <br />
-                Dondaparthi, Visakhapatnam, <br />
-                Andhra Pradesh – 530016
+                4-61-2, Lawsons Bay Colony, Pedda Waltair,
+                Visakhapatnam, Andhra Pradesh 530017
               </p>
             </div>
           </div>

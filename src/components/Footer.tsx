@@ -140,7 +140,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://www.instagram.com/brandexmarketing"
+                href="https://www.instagram.com/brand_exmedia/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-sm text-white/70 hover:text-brand-accent transition-colors"

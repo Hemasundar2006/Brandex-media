@@ -33,7 +33,7 @@ export default function Team() {
       bio: "Fusing deep strategic marketing expertise with visual production to engineer high-performance brand ecosystems. Pradeep directs client brand architecture, positioning narratives, and multi-channel marketing campaigns across domestic and international markets.",
       image: "/Screenshot 2026-07-09 011106.png",
       linkedin: "https://www.linkedin.com/company/brandex-media",
-      instagram: "https://www.instagram.com/brandexmarketing",
+      instagram: "https://www.instagram.com/brand_exmedia/",
     },
     {
       name: "Mahesh Arjilli",
@@ -42,7 +42,7 @@ export default function Team() {
       bio: "Cinematic filmmaker translating complex concepts into memorable, authentic visual narratives. Mahesh oversees studio and on-location production, leading camera choreography, high-fashion model shoots, lighting design, and post-production color grading.",
       image: "/Screenshot 2026-07-09 011158.png",
       linkedin: "https://www.linkedin.com/company/brandex-media",
-      instagram: "https://www.instagram.com/brandexmarketing",
+      instagram: "https://www.instagram.com/brand_exmedia/",
     },
   ];
 

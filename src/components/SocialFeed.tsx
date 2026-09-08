@@ -45,7 +45,7 @@ export default function SocialFeed() {
       title: "Model & Fashion Aesthetic",
       tagline: "Natural light lifestyle direction on location.",
       image: "/IMG_3795.PNG",
-      reelUrl: "https://www.instagram.com/brandexmarketing",
+      reelUrl: "https://www.instagram.com/brand_exmedia/",
       views: "64K+ Views",
     },
     {
@@ -54,7 +54,7 @@ export default function SocialFeed() {
       title: "Product Styling Precision",
       tagline: "Framing reflections and luxury textures.",
       image: "/Screenshot 2026-07-15 223711.png",
-      reelUrl: "https://www.instagram.com/brandexmarketing",
+      reelUrl: "https://www.instagram.com/brand_exmedia/",
       views: "92K+ Views",
     },
   ];
@@ -76,13 +76,13 @@ export default function SocialFeed() {
             </h2>
           </div>
           <a
-            href="https://www.instagram.com/brandexmarketing"
+            href="https://www.instagram.com/brand_exmedia/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-white font-oswald text-xs uppercase tracking-widest font-bold transition-all group"
           >
             <InstagramIcon className="w-4 h-4 text-brand-accent" />
-            <span>Follow @brandexmarketing</span>
+            <span>Follow @brand_exmedia</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         </div>

@@ -121,7 +121,7 @@ const jsonLd = {
       telephone: ["+919494835771", "+917995138462"],
       email: "hello@brandexmedia.com",
       sameAs: [
-        "https://www.instagram.com/brandexmarketing",
+        "https://www.instagram.com/brand_exmedia/",
         "https://www.linkedin.com/company/brandex-media",
       ],
     },

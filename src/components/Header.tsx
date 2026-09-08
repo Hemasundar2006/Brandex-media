@@ -174,7 +174,7 @@ export default function Header() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <div className="flex justify-between items-center text-xs text-white/50 font-mono">
-                <span>hello@brandexmedia.com</span>
+                <span>teambrandexmedia@gmail.com</span>
                 <span>IND | USA</span>
               </div>
             </div>

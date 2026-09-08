@@ -88,7 +88,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <span>hello@brandexmedia.com</span>
+                <span>teambrandexmedia@gmail.com</span>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function Footer() {
                 <span>WhatsApp Desk</span>
               </a>
               <a
-                href="mailto:hello@brandexmedia.com"
+                href="mailto:teambrandexmedia@gmail.com"
                 className="flex items-center gap-2.5 text-sm text-white/70 hover:text-brand-accent transition-colors"
               >
                 <Mail className="w-4 h-4" />

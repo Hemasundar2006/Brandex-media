@@ -87,7 +87,7 @@ export default function CareersPage() {
 
             <div className="flex-shrink-0">
               <a
-                href={`mailto:hello@brandexmedia.com?subject=Application:%20${encodeURIComponent(job.title)}`}
+                href={`mailto:teambrandexmedia@gmail.com?subject=Application:%20${encodeURIComponent(job.title)}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-brand-accent hover:text-background-outer text-white font-oswald text-xs uppercase tracking-widest font-bold transition-all border border-white/15"
               >
                 <span>Apply via Email</span>
@@ -107,7 +107,7 @@ export default function CareersPage() {
             We are always open to visionary collaborators, freelancers, and creative directors. Send your portfolio directly to our leadership.
           </p>
           <a
-            href="mailto:hello@brandexmedia.com?subject=Spontaneous%20Portfolio%20Submission"
+            href="mailto:teambrandexmedia@gmail.com?subject=Spontaneous%20Portfolio%20Submission"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-accent text-background-outer font-oswald text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(196,232,109,0.3)]"
           >
             <span>Send General Portfolio</span>

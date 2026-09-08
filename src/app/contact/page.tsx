@@ -83,7 +83,7 @@ export default function ContactPage() {
                     href="mailto:[EMAIL_ADDRESS]"
                     className="text-sm text-brand-accent hover:underline font-mono mt-0.5 inline-block"
                   >
-                    [EMAIL_ADDRESS]
+                    teambrandexmedia@gmail.com
                   </a>
                 </div>
               </div>

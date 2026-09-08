@@ -46,8 +46,8 @@ export default function QuickContactDock() {
     },
     {
       title: "Email Agency Desk",
-      subtitle: "hello@brandexmedia.com",
-      href: "mailto:hello@brandexmedia.com",
+      subtitle: "teambrandexmedia@gmail.com",
+      href: "mailto:teambrandexmedia@gmail.com",
       isExternal: true,
       icon: <Mail className="w-5 h-5 text-brand-accent" />,
     },

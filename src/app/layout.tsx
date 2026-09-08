@@ -119,7 +119,7 @@ const jsonLd = {
         addressCountry: "IN",
       },
       telephone: ["+919494835771", "+917995138462"],
-      email: "hello@brandexmedia.com",
+      email: "teambrandexmedia@gmail.com",
       sameAs: [
         "https://www.instagram.com/brand_exmedia/",
         "https://www.linkedin.com/company/brandex-media",

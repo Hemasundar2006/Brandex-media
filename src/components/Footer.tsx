@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="space-y-3 text-xs text-white/60 font-mono">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
-                <span>TSN Colony, Hotel Sinka Grand, Dondaparthi, Visakhapatnam – 530016</span>
+                <span>4-61-2, Lawsons Bay Colony, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-accent flex-shrink-0" />

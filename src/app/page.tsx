@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="w-full overflow-x-hidden">
       <Preloader />
-      
+
       {/* 1. Cinematic Hero Section */}
       <Hero />
 
@@ -54,7 +54,7 @@ export default function Home() {
       {/* 12. Structured Enquiry & Conversion Section */}
       <section className="w-full py-28 md:py-40 bg-background-outer relative overflow-hidden border-t border-white/5" id="contact">
         <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-brand-mid/15 blur-[160px] pointer-events-none rounded-full" />
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Heading & Value Proposition */}
@@ -80,7 +80,7 @@ export default function Home() {
                   <div>
                     <h4 className="text-white font-bold mb-1">Visakhapatnam Studio</h4>
                     <p className="text-xs text-white/60 leading-relaxed font-mono">
-                      43-20-31/49-20-31, Beside Bata Showroom, TSN Colony, Hotel Sinka Grand, Dondaparthi, Visakhapatnam – 530016
+                      4-61-2, Lawsons Bay Colony, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017
                     </p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-0.5">Agency Desk</h4>
-                    <p className="text-xs text-white/60 font-mono">hello@brandexmedia.com</p>
+                    <p className="text-xs text-white/60 font-mono">teambrandexmedia@gmail.com</p>
                   </div>
                 </div>
               </div>

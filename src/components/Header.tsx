@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Menu, X, ArrowUpRight, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +11,13 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 160,
+    damping: 25,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +45,10 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 md:px-12 flex items-center justify-between ${
-          scrolled
-            ? "bg-background-outer/85 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl shadow-black/40"
-            : "bg-transparent py-6"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 md:px-12 flex items-center justify-between ${scrolled
+          ? "bg-background-outer/85 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl shadow-black/40"
+          : "bg-transparent py-6"
+          }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -59,7 +65,7 @@ export default function Header() {
                 className="object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <span className="text-[7px] text-brand-accent tracking-[0.18em] font-bold uppercase absolute -bottom-2 right-1 font-mono">
+            <span className="text-[7px] text-brand-accent tracking-[0.18em] font-bold uppercase absolute -bottom-3 right-2 font-mono">
               IND | USA
             </span>
           </div>
@@ -73,9 +79,8 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.path}
-                className={`relative text-xs uppercase tracking-widest font-medium transition-colors py-1 ${
-                  isActive ? "text-brand-accent font-bold" : "text-white/70 hover:text-white"
-                }`}
+                className={`relative text-xs uppercase tracking-widest font-medium transition-colors py-1 ${isActive ? "text-brand-accent font-bold" : "text-white/70 hover:text-white"
+                  }`}
               >
                 <span>{item.name}</span>
                 {isActive && (
@@ -110,6 +115,14 @@ export default function Header() {
         >
           {menuOpen ? <X className="w-6 h-6 text-brand-accent" /> : <Menu className="w-6 h-6" />}
         </button>
+
+        {/* Thin Scroll Progress Bar directly under the Header */}
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/[0.06] overflow-hidden pointer-events-none">
+          <motion.div
+            className="h-full bg-gradient-to-r from-brand-mid via-brand-accent to-[#d8ff76] origin-left shadow-[0_0_8px_rgba(196,232,109,0.8)]"
+            style={{ scaleX }}
+          />
+        </div>
       </motion.header>
 
       {/* Full-Screen Mobile Drawer */}
@@ -138,9 +151,8 @@ export default function Header() {
                     >
                       <Link
                         href={item.path}
-                        className={`flex items-center justify-between text-3xl sm:text-4xl font-oswald uppercase tracking-tight transition-colors py-1.5 border-b border-white/10 ${
-                          isActive ? "text-brand-accent font-bold" : "text-white/80 hover:text-white"
-                        }`}
+                        className={`flex items-center justify-between text-3xl sm:text-4xl font-oswald uppercase tracking-tight transition-colors py-1.5 border-b border-white/10 ${isActive ? "text-brand-accent font-bold" : "text-white/80 hover:text-white"
+                          }`}
                         onClick={() => setMenuOpen(false)}
                       >
                         <span>{item.name}</span>

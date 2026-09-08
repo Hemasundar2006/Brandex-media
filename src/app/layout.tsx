@@ -3,6 +3,7 @@ import { Syne, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
 import Script from "next/script";
 import CustomCursor from "@/components/CustomCursor";
 import QuickContactDock from "@/components/QuickContactDock";
@@ -210,6 +211,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           `}
         </Script>
 
+        <ScrollProgress />
         <Header />
         <div className="flex-grow pt-20 md:pt-24">{children}</div>
         <Footer />

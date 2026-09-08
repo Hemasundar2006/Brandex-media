@@ -80,10 +80,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-sm font-bold text-white uppercase font-mono">Email</h3>
                   <a
-                    href="mailto:hello@brandexmedia.com"
+                    href="mailto:[EMAIL_ADDRESS]"
                     className="text-sm text-brand-accent hover:underline font-mono mt-0.5 inline-block"
                   >
-                    teambrandexmedia@gmail.com
+                    [EMAIL_ADDRESS]
                   </a>
                 </div>
               </div>

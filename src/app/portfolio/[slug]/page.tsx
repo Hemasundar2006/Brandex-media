@@ -14,6 +14,7 @@ interface CaseStudy {
   servicesUsed: string[];
   results: { metric: string; label: string }[];
   heroImage?: string;
+  imagePosition?: string;
   heroVideo?: string;
   gallery: string[];
 }
@@ -170,6 +171,131 @@ const caseStudies: Record<string, CaseStudy> = {
       "/Screenshot 2026-07-15 223720.png",
     ],
   },
+  "showreel-commercial": {
+    slug: "showreel-commercial",
+    title: "Commercial Film Showreel",
+    client: "BrandEx Media Studio",
+    category: "Cinematic Production",
+    overview: "A high-octane compilation of our best commercial cinematography, sound design, and narrative brand storytelling.",
+    challenge: "We needed a singular, powerful showcase to demonstrate our studio's capacity for high-end cinematic production and dynamic editing.",
+    strategy: "Curating the most visually striking moments from a year of productions, edited to a custom soundbed that highlights pacing, emotion, and technical prowess.",
+    servicesUsed: ["Video Editing", "Cinematography", "Sound Design", "Color Grading"],
+    results: [
+      { metric: "Viral", label: "Showcase" },
+      { metric: "100+", label: "New Leads" },
+      { metric: "4K", label: "Master" }
+    ],
+    heroVideo: "/IMG_0785.MP4",
+    heroImage: "/Screenshot 2026-07-15 223705.png",
+    gallery: ["/Screenshot 2026-07-15 223705.png", "/IMG_1710.PNG"]
+  },
+  "brand-identity-system": {
+    slug: "brand-identity-system",
+    title: "Identity Design & Brand Book",
+    client: "Fintech & Retail Venture",
+    category: "Identity System",
+    overview: "A unified typographic and visual design system built to scale across omnichannel touchpoints.",
+    challenge: "The client possessed a fragmented identity that lacked consistency across physical retail spaces and their digital app interface.",
+    strategy: "Developed a comprehensive brand book including custom typography rules, strict color hierarchies, and versatile logo lockups ensuring 100% coherence.",
+    servicesUsed: ["Brand Identity", "Graphic Design", "Brand Guidelines", "UI/UX Consultation"],
+    results: [
+      { metric: "100%", label: "Cohesive Rebrand" },
+      { metric: "Omnichannel", label: "System" },
+      { metric: "+45%", label: "Brand Trust" }
+    ],
+    heroImage: "/IMG_1710.PNG",
+    gallery: ["/IMG_1710.PNG", "/IMG_6459.PNG"]
+  },
+  "digital-marketing-growth": {
+    slug: "digital-marketing-growth",
+    title: "Omnichannel Growth & Meta Ads",
+    client: "E-Commerce Partners",
+    category: "Performance Marketing",
+    overview: "High-ROI advertising funnels paired with creative retargeting and real-time conversion tracking.",
+    challenge: "The client's previous agency was delivering high impressions but failing to track or deliver actual bottom-line conversions and ROAS.",
+    strategy: "We implemented advanced Pixel tracking, dynamic catalog ads, and A/B tested creative hooks to dramatically lower Customer Acquisition Cost.",
+    servicesUsed: ["Performance Marketing", "Meta Ads", "Conversion Tracking", "Copywriting"],
+    results: [
+      { metric: "3.8x", label: "ROAS" },
+      { metric: "-40%", label: "CAC" },
+      { metric: "2.1M", label: "Tracked Sales" }
+    ],
+    heroImage: "/IMG_2201.JPG.jpeg",
+    gallery: ["/IMG_2201.JPG.jpeg", "/IMG_1895.JPG.jpeg"]
+  },
+  "custom-web-platform": {
+    slug: "custom-web-platform",
+    title: "Next.js Digital Experience",
+    client: "BrandEx Digital Experience",
+    category: "Digital Systems & Web",
+    overview: "Sub-second load times, fluid micro-interactions, and conversion-optimized visual architecture built on Next.js.",
+    challenge: "Standard WordPress templates were too slow and creatively limiting to represent a premium digital agency.",
+    strategy: "Built a headless Next.js architecture with Tailwind CSS and Framer Motion for completely custom, highly performant user interactions.",
+    servicesUsed: ["Web Development", "UI/UX Design", "Next.js", "Performance Optimization"],
+    results: [
+      { metric: "100", label: "Performance Score" },
+      { metric: "<1s", label: "Load Time" },
+      { metric: "Bespoke", label: "Animations" }
+    ],
+    heroImage: "/IMG_7020.PNG",
+    gallery: ["/IMG_7020.PNG", "/IMG_1710.PNG"]
+  },
+  "fashion-lifestyle-creator-network": {
+    slug: "fashion-lifestyle-creator-network",
+    title: "Urban Fashion Creator Roster",
+    client: "D2C Brands & Grooming",
+    category: "Lifestyle & Grooming",
+    overview: "High-aesthetic lookbooks and styling partnerships connecting brands with style-conscious audiences.",
+    challenge: "A men's grooming brand struggled to find authentic male voices who could naturally integrate their products into high-fashion lifestyle content.",
+    strategy: "We partnered them with our urban fashion creators to produce sleek, high-retention lookbook Reels that placed the product natively in morning routines.",
+    servicesUsed: ["Influencer Marketing", "Content Strategy", "Video Production", "Creator Contracting"],
+    results: [
+      { metric: "High-Intent", label: "Reach" },
+      { metric: "150K+", label: "Active Engagement" },
+      { metric: "Sold Out", label: "Key SKUs" }
+    ],
+    heroImage: "/influencers/creator-fashion-male.jpeg",
+    gallery: ["/influencers/creator-fashion-male.jpeg", "/Screenshot 2026-07-15 223727.png"]
+  },
+  "ethnic-cultural-influencer-campaigns": {
+    slug: "ethnic-cultural-influencer-campaigns",
+    title: "Cultural & Festive Creators",
+    client: "Regional Retail & Heritage Brands",
+    category: "Ethnic & Heritage Campaigns",
+    overview: "Deep cultural resonance and high-converting festive storytelling across regional consumer markets.",
+    challenge: "During peak festive seasons, a heritage saree brand's traditional ads were getting drowned out by competitors with larger media budgets.",
+    strategy: "Instead of fighting in ad auctions, we deployed cultural ambassadors for organic, narrative-driven store walkthroughs and styling sessions.",
+    servicesUsed: ["Influencer Management", "Regional Marketing", "Content Creation", "Event Promotion"],
+    results: [
+      { metric: "+240%", label: "Brand Recall" },
+      { metric: "250K+", label: "Regional Reach" },
+      { metric: "3x", label: "Footfall Increase" }
+    ],
+    heroImage: "/influencers/creator-traditional-female.jpeg",
+    gallery: ["/influencers/creator-traditional-female.jpeg", "/influencers/shivanna-1-6m.jpeg"]
+  },
+  "grassroots-regional-creators": {
+    slug: "grassroots-regional-creators",
+    title: "Regional Grassroots Creators",
+    client: "Mass Consumer Brands",
+    category: "Grassroots Viral Reach",
+    overview: "Hyper-authentic regional comedy and community storytelling delivering massive organic visibility.",
+    challenge: "Mass consumer brands often fail to build trust outside urban hubs because their polished advertising feels alien to rural and regional demographics.",
+    strategy: "We integrated the brand natively into relatable, everyday comedic scenarios performed by trusted grassroots creators, ensuring organic engagement.",
+    servicesUsed: ["Influencer Marketing", "Regional Casting", "Script Writing", "Viral Distribution"],
+    results: [
+      { metric: "100%", label: "Organic Reach" },
+      { metric: "500K+", label: "Viral Views" },
+      { metric: "Hyper", label: "Authentic" }
+    ],
+    heroImage: "/influencers/creator-rural-lifestyle.jpeg",
+    imagePosition: "object-[50%_80%]",
+    gallery: [
+      "/influencers/creator-rural-lifestyle.jpeg",
+      "/influencers/creator-traditional-female.jpeg",
+      "/influencers/shivanna-1-6m.jpeg"
+    ]
+  }
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -195,7 +321,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
   }
 
   return (
-    <main className="w-full min-h-screen bg-background-outer text-white">
+    <main className="w-full min-h-screen bg-background-outer text-white overflow-x-hidden">
       {/* Top Breadcrumb */}
       <div className="max-w-6xl mx-auto px-6 pt-12">
         <Link
@@ -247,7 +373,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
                 alt={study.title}
                 fill
                 priority
-                className="object-cover"
+                className={`object-cover ${study.imagePosition || "object-top"}`}
                 sizes="1200px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background-outer via-transparent to-transparent opacity-60" />
@@ -363,7 +489,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
                 src={imgSrc}
                 alt={`${study.title} Frame ${idx + 1}`}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className={`object-cover ${study.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-500`}
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />

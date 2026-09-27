@@ -87,7 +87,7 @@ export default function Team() {
                   src={founder.image}
                   alt={founder.name}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                   sizes="300px"
                 />
                 <div className="absolute inset-0 bg-brand-accent/15 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

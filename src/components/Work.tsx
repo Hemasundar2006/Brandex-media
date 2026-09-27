@@ -17,8 +17,10 @@ interface ProjectItem {
   client: string;
   tagline: string;
   image?: string;
+  imagePosition?: string;
   video?: string;
   featured?: boolean;
+  externalLink?: string;
   results?: string;
 }
 
@@ -36,6 +38,18 @@ export default function Work() {
   ];
 
   const projects: ProjectItem[] = [
+    {
+      id: "proj-14",
+      slug: "influencer-viral-reel-showcase",
+      title: "Creator Viral Spotlight",
+      category: "SOCIAL",
+      categoryLabel: "Short-Form Video",
+      client: "Creator Campaign",
+      tagline: "High-retention vertical video engineered specifically for algorithm-driven organic reach.",
+      video: "/influencers/SnapInsta.to_AQNPBluqfP_MpYBvZhQFxrRCCR1ya92s2DiohL_nHfuu1pqgNPonkr_CuAqJCs6cUlnhyzsGzVgovZ9MLb2pEzKsZ5XZ3VoFpH86x6g.mp4",
+      externalLink: "https://www.instagram.com/pareshaan_boys__/",
+      results: "Viral Showcase",
+    },
     {
       id: "proj-1",
       slug: "premium-posters",
@@ -123,6 +137,7 @@ export default function Work() {
       client: "Shivanna x BrandEx Media",
       tagline: "Mass regional reach and viral celebration milestone commanding millions of active engagements.",
       image: "/influencers/shivanna-1-6m.jpeg",
+      externalLink: "https://www.instagram.com/royal_mech_ramana/",
       results: "1.6M+ Milestone",
     },
     {
@@ -145,6 +160,7 @@ export default function Work() {
       client: "BrandEx Media & Sinka Studios",
       tagline: "Cinema music video release starring Ishak Sinka, Nekkanti Divya, and Allari Apsara.",
       image: "/influencers/music-video-brandex.jpeg",
+      externalLink: "https://www.instagram.com/ishaksinka/",
       results: "Official Studio Release",
     },
     {
@@ -156,6 +172,7 @@ export default function Work() {
       client: "D2C Brands & Grooming",
       tagline: "High-aesthetic lookbooks and styling partnerships connecting brands with style-conscious audiences.",
       image: "/influencers/creator-fashion-male.jpeg",
+      externalLink: "https://www.instagram.com/lakshman_tekumudi_broo/",
       results: "High-Intent Reach",
     },
     {
@@ -167,6 +184,7 @@ export default function Work() {
       client: "Regional Retail & Heritage Brands",
       tagline: "Deep cultural resonance and high-converting festive storytelling across regional consumer markets.",
       image: "/influencers/creator-traditional-female.jpeg",
+      externalLink: "https://www.instagram.com/preethipriya926/",
       results: "+240% Recall",
     },
     {
@@ -178,6 +196,8 @@ export default function Work() {
       client: "Mass Consumer Brands",
       tagline: "Hyper-authentic regional comedy and community storytelling delivering massive organic visibility.",
       image: "/influencers/creator-rural-lifestyle.jpeg",
+      imagePosition: "object-[50%_80%]",
+      externalLink: "https://www.instagram.com/suresh__guru/",
       results: "100% Organic Reach",
     },
   ];
@@ -265,18 +285,43 @@ export default function Work() {
             transition={{ duration: 0.5 }}
             className="mb-12 group"
           >
-            <Link href={`/portfolio/${flagshipProject.slug}`} className="block w-full">
+            <Link 
+              href={flagshipProject.externalLink || `/portfolio/${flagshipProject.slug}`} 
+              className="block w-full"
+              {...(flagshipProject.externalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
               <div className="relative w-full rounded-[2.5rem] overflow-hidden glass-panel border border-white/15 group-hover:border-brand-accent/60 transition-all duration-500 shadow-2xl bg-black/40 min-h-[460px] md:min-h-[540px] flex flex-col justify-between p-6 sm:p-10 md:p-14">
-                {/* Background Image with Cinematic Gradient */}
-                <div className="absolute inset-0 z-0">
-                  <Image
-                    src={flagshipProject.image || "/Screenshot 2026-07-15 223705.png"}
-                    alt={flagshipProject.title}
-                    fill
-                    priority
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                    sizes="(max-width: 1280px) 100vw, 1280px"
-                  />
+                {/* Background Media with Cinematic Gradient */}
+                <div className="absolute inset-0 z-0 bg-black">
+                  {flagshipProject.video ? (
+                    <>
+                      <video
+                        src={flagshipProject.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110"
+                      />
+                      <video
+                        src={flagshipProject.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="relative w-full h-full object-contain scale-[1.15] group-hover:scale-[1.20] transition-transform duration-700 ease-out z-10"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={flagshipProject.image || "/Screenshot 2026-07-15 223705.png"}
+                      alt={flagshipProject.title}
+                      fill
+                      priority
+                      className={`object-cover ${flagshipProject.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-700 ease-out`}
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-background-outer via-background-outer/60 to-background-outer/20" />
                 </div>
 
@@ -341,20 +386,32 @@ export default function Work() {
                   transition={{ duration: 0.4 }}
                   className="group flex flex-col justify-between"
                 >
-                  <Link href={`/portfolio/${project.slug}`} className="block w-full">
+                  <Link 
+                    href={project.externalLink || `/portfolio/${project.slug}`} 
+                    className="block w-full"
+                    {...(project.externalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  >
                     {/* Media Container with Consistent 16:10 Framing */}
                     <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden glass-panel border border-white/10 group-hover:border-brand-accent/50 transition-all duration-500 shadow-xl bg-black/40">
                       {project.video ? (
-                        <div className="relative w-full h-full">
+                        <div className="relative w-full h-full bg-black overflow-hidden">
                           <video
                             src={project.video}
                             autoPlay
                             muted
                             loop
                             playsInline
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                            className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110"
                           />
-                          <div className="absolute top-4 right-4 p-2.5 rounded-full bg-background-outer/80 backdrop-blur-md border border-white/20 text-brand-accent shadow-lg">
+                          <video
+                            src={project.video}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="relative w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out z-10"
+                          />
+                          <div className="absolute top-4 right-4 p-2.5 rounded-full bg-background-outer/80 backdrop-blur-md border border-white/20 text-brand-accent shadow-lg z-20">
                             <Play className="w-3.5 h-3.5 fill-brand-accent" />
                           </div>
                         </div>
@@ -364,7 +421,7 @@ export default function Work() {
                             src={project.image || "/Screenshot 2026-07-15 223705.png"}
                             alt={project.title}
                             fill
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                            className={`object-cover ${project.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-700 ease-out`}
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-background-outer via-background-outer/30 to-transparent opacity-85 group-hover:opacity-60 transition-opacity duration-500" />

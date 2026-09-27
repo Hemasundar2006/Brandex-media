@@ -57,7 +57,7 @@ export default function Services() {
       title: "Web Development",
       tagline: "Next.js modern web applications built for blazing speed and conversions.",
       deliverables: ["Custom Next.js & React Architectures", "Modern 2026 Responsive Experiences", "Technical SEO Optimization", "Headless CMS Integration"],
-      previewImage: "/IMG_7020.PNG",
+      previewImage: "/web-development-service.jpg",
     },
     {
       num: "07",
@@ -229,6 +229,7 @@ export default function Services() {
                 }`}
               >
                 <button
+                  suppressHydrationWarning
                   onClick={() => setMobileExpandedIndex(isExpanded ? null : index)}
                   className="w-full p-5 flex items-center justify-between text-left"
                 >

@@ -166,7 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body
-        className="min-h-full flex flex-col font-sans text-white bg-background-center cursor-default selection:bg-brand-accent selection:text-background-outer"
+        className="min-h-full flex flex-col font-sans text-white bg-background-center cursor-default selection:bg-brand-accent selection:text-background-outer overflow-x-hidden"
         suppressHydrationWarning
       >
         {/* Google Tag Manager (noscript) */}

@@ -20,6 +20,7 @@ const creators = [
     tagline: "Mass regional celebrity milestone celebration commanding millions of engagements.",
     deliverables: ["Milestone PR Campaigns", "Mass Brand Endorsement", "Cinema Integration"],
     slug: "creator-influencer-management",
+    externalLink: "https://www.instagram.com/royal_mech_ramana/",
   },
   {
     name: "Gaalishwasam Bandhamalle",
@@ -31,6 +32,7 @@ const creators = [
     tagline: "Official music video starring Ishak Sinka, Nekkanti Divya, and Allari Apsara.",
     deliverables: ["Full Film Production", "Celebrity Casting", "Digital Launch Promotion"],
     slug: "brandex-music-video-production",
+    externalLink: "https://www.instagram.com/ishaksinka/",
   },
   {
     name: "Urban Fashion & Lifestyle Creator",
@@ -42,6 +44,7 @@ const creators = [
     tagline: "Sleek lookbooks, contemporary styling, and modern male lifestyle campaigns.",
     deliverables: ["Lookbook Reels", "Product Unboxing", "Exclusive Discount Codes"],
     slug: "creator-influencer-management",
+    externalLink: "https://www.instagram.com/lakshman_tekumudi_broo/",
   },
   {
     name: "Traditional & Ethnic Cultural Creator",
@@ -53,6 +56,7 @@ const creators = [
     tagline: "Deep cultural resonance and high-converting festive saree and retail storytelling.",
     deliverables: ["Festive Saree Shoots", "Regional Brand Endorsements", "Store Walkthroughs"],
     slug: "creator-influencer-management",
+    externalLink: "https://www.instagram.com/preethipriya926/",
   },
   {
     name: "Grassroots & Regional Viral Creator",
@@ -61,15 +65,17 @@ const creators = [
     tier: "Grassroots Viral",
     category: "Regional Humor & Rural Life",
     image: "/influencers/creator-rural-lifestyle.jpeg",
+    imagePosition: "object-[50%_80%]",
     tagline: "Hyper-authentic regional comedy and rural community storytelling with 100% organic virality.",
     deliverables: ["Native Skit Integrations", "Organic Narrative Placement", "Mass Regional Virality"],
     slug: "creator-influencer-management",
+    externalLink: "https://www.instagram.com/suresh__guru/",
   },
 ];
 
 export default function InfluencersPage() {
   return (
-    <main className="w-full min-h-screen bg-background-outer text-white pt-24 pb-20">
+    <main className="w-full min-h-screen bg-background-outer text-white pt-24 pb-20 overflow-x-hidden">
       {/* Header */}
       <section className="relative w-full py-20 px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-accent/10 blur-[160px] pointer-events-none rounded-full" />
@@ -140,7 +146,7 @@ export default function InfluencersPage() {
                     src={c.image}
                     alt={c.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className={`object-cover ${c.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-700 ease-out`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background-outer via-transparent to-transparent opacity-90" />
@@ -182,7 +188,8 @@ export default function InfluencersPage() {
 
               <div className="p-6 pt-0 border-t border-white/5 mt-auto">
                 <Link
-                  href={`/portfolio/${c.slug}`}
+                  href={c.externalLink || `/portfolio/${c.slug}`}
+                  {...(c.externalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-white/5 hover:bg-brand-accent hover:text-background-outer border border-white/10 text-white font-oswald text-xs uppercase tracking-widest font-bold transition-all duration-300"
                 >
                   <span>Explore Campaign</span>

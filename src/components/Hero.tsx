@@ -89,7 +89,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Main Hero Typography & Call to Actions */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-grow flex flex-col justify-center items-center text-center mt-8 md:mt-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex-grow flex flex-col justify-center items-center text-center mt-8 md:mt-16">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -110,7 +110,7 @@ export default function Hero() {
           {/* Confident Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-oswald text-5xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[124px] font-bold uppercase leading-[0.92] tracking-tight text-white mb-6"
+            className="font-oswald text-[2.6rem] xs:text-5xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[124px] font-bold uppercase leading-[0.92] tracking-tight text-white mb-6 w-full"
           >
             <span>WE MAKE BRANDS </span>
             <span className="block mt-1">
@@ -129,7 +129,7 @@ export default function Hero() {
           {/* Supporting Statement */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed mb-10 px-4"
+            className="text-base sm:text-lg md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed mb-10 px-2 sm:px-4"
           >
             Strategy, cinematic content, and high-performance digital experiences built to help ambitious brands dominate their market.
           </motion.p>
@@ -179,14 +179,14 @@ export default function Hero() {
       {/* Capabilities Continuous Marquee Ticker */}
       <div className="relative z-20 w-full bg-brand-accent text-background-outer py-3.5 overflow-hidden border-y border-brand-accent/40 shadow-[0_0_30px_rgba(196,232,109,0.2)]">
         <motion.div
-          className="flex whitespace-nowrap items-center gap-10 font-oswald text-sm md:text-base font-bold uppercase tracking-widest select-none"
+          className="flex whitespace-nowrap items-center gap-6 md:gap-10 font-oswald text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest select-none"
           animate={{ x: ["0%", "-50%"] }}
           transition={{ duration: 25, ease: "linear", repeat: Infinity }}
         >
           {[...capabilities, ...capabilities].map((cap, i) => (
-            <div key={i} className="flex items-center gap-10">
-              <span className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-background-outer" />
+            <div key={i} className="flex items-center gap-6 md:gap-10">
+              <span className="flex items-center gap-2 md:gap-3">
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-background-outer flex-shrink-0" />
                 <span>{cap}</span>
               </span>
             </div>

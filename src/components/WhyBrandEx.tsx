@@ -100,7 +100,7 @@ export default function WhyBrandEx() {
         </div>
 
         {/* Bottom Callout Banner */}
-        <div className="mt-16 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-background-center/50 to-background-outer border border-brand-accent/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+        <div className="mt-16 p-6 sm:p-8 md:p-12 rounded-3xl bg-gradient-to-r from-background-center/50 to-background-outer border border-brand-accent/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-2xl">
           <div>
             <h4 className="font-oswald text-2xl md:text-3xl font-bold uppercase text-white mb-2">
               Ready to elevate your brand to the next level?
@@ -109,16 +109,16 @@ export default function WhyBrandEx() {
               Explore our transparent growth packages or schedule an introductory strategy call.
             </p>
           </div>
-          <div className="flex items-center gap-4 flex-shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto flex-shrink-0">
             <Link
               href="/pricing"
-              className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-oswald text-xs uppercase tracking-widest font-bold transition-all"
+              className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-oswald text-xs uppercase tracking-widest font-bold transition-all text-center"
             >
               View Packages
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3.5 rounded-full bg-brand-accent text-background-outer font-oswald text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(196,232,109,0.3)]"
+              className="px-6 py-3.5 rounded-full bg-brand-accent text-background-outer font-oswald text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(196,232,109,0.3)] text-center"
             >
               Start Conversation →
             </Link>

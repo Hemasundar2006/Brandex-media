@@ -48,13 +48,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-background-outer border-t border-white/10 pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
+    <footer className="w-full bg-background-outer border-t border-white/10 pt-16 md:pt-24 pb-8 md:pb-12 px-4 sm:px-6 md:px-12 relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[1px] bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-50 shadow-[0_0_80px_20px_rgba(196,232,109,0.25)]" />
 
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-20 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 md:pb-20 border-b border-white/10">
           {/* Brand Column (5 cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
@@ -80,15 +80,15 @@ export default function Footer() {
             <div className="space-y-3 text-xs text-white/60 font-mono">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
-                <span>4-61-2, Lawsons Bay Colony, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017</span>
+                <span className="break-words">4-61-2, Lawsons Bay Colony, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <span>+91 9494835771 / +91 7995138462</span>
+                <span className="break-all">+91 9494835771 / +91 7995138462</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <span>teambrandexmedia@gmail.com</span>
+                <span className="break-all">teambrandexmedia@gmail.com</span>
               </div>
             </div>
           </div>
@@ -190,8 +190,8 @@ export default function Footer() {
 
         {/* Bottom Legal & Copyright Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50 font-mono">
-          <p>© 2026 BrandEx Media. All rights reserved. Registered Creative Agency.</p>
-          <div className="flex items-center gap-6">
+          <p className="text-center sm:text-left">© 2026 BrandEx Media. All rights reserved. Registered Creative Agency.</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>

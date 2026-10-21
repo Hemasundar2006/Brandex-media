@@ -25,9 +25,18 @@
   --brand-border: #8FA396;
 }
 
+/* ─── Global Box-Sizing ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* Prevent any element from causing horizontal scrolling */
+  overflow-x: hidden;
 }
 
 body {
@@ -36,12 +45,22 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 100dvh; /* 100dvh prevents mobile browser-bar cutoff */
   overflow-x: hidden;
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  /* Prevent long words / URLs from breaking layout */
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-/* Text Selection */
+/* Ensure images / videos never overflow their container */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Text Selection ─────────────────────────────────────── */
 ::selection {
   background-color: var(--color-brand-accent);
   color: #050805;
@@ -92,6 +111,14 @@ body {
 .stroke-brand {
   -webkit-text-stroke: 1.5px var(--color-brand-accent);
   color: transparent;
+}
+
+/* ─── Body scroll-lock when mobile menu is open ──────────── */
+body.menu-open {
+  overflow: hidden;
+  /* iOS-safe scroll lock */
+  position: fixed;
+  width: 100%;
 }
 
 /* Accessibility: Reduced Motion */

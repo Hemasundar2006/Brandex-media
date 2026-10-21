@@ -161,7 +161,8 @@ export default function ContactForm() {
                     placeholder="Your Name *"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-sm outline-none transition-colors"
+                    autoComplete="name"
+                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-base outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -171,7 +172,8 @@ export default function ContactForm() {
                     placeholder="Company / Brand Name"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-sm outline-none transition-colors"
+                    autoComplete="organization"
+                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-base outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -182,7 +184,9 @@ export default function ContactForm() {
                     placeholder="Work Email *"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-sm outline-none transition-colors"
+                    autoComplete="email"
+                    inputMode="email"
+                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-base outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -193,7 +197,9 @@ export default function ContactForm() {
                     placeholder="Phone / WhatsApp Number *"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-sm outline-none transition-colors"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-base outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -264,7 +270,7 @@ export default function ContactForm() {
                 placeholder="Tell us about your brand vision, goals, and key deliverables..."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-sm outline-none transition-colors resize-none"
+                className="w-full bg-white/5 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3.5 text-white text-base outline-none transition-colors resize-none"
               />
             </div>
 

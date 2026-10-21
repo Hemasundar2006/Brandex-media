@@ -94,9 +94,9 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
-              className={`relative glass-panel rounded-[2.5rem] p-8 sm:p-10 flex flex-col justify-between transition-all duration-400 ${
+              className={`relative glass-panel rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between transition-all duration-400 ${
                 plan.popular
-                  ? "border-brand-accent/80 shadow-[0_0_50px_rgba(196,232,109,0.2)] bg-white/[0.06] transform lg:-translate-y-4"
+                  ? "border-brand-accent/80 shadow-[0_0_50px_rgba(196,232,109,0.2)] bg-white/[0.06] lg:-translate-y-4"
                   : "border-white/10 hover:border-brand-accent/40"
               }`}
             >
@@ -122,10 +122,10 @@ export default function PricingPage() {
 
                 <div className="py-6 border-y border-white/10 mb-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="font-oswald text-5xl sm:text-6xl font-extrabold text-white tracking-tight">
+                    <span className="font-oswald text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                       {plan.price}
                     </span>
-                    <span className="font-mono text-sm text-white/50">{plan.period}</span>
+                    <span className="font-mono text-sm text-white/50 whitespace-nowrap">{plan.period}</span>
                   </div>
                 </div>
 

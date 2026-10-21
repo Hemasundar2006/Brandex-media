@@ -40,7 +40,7 @@ export default function IntroStatement() {
           transition={{ duration: 0.8 }}
           className="max-w-6xl"
         >
-          <h2 className="font-oswald text-4xl sm:text-6xl md:text-7xl lg:text-[84px] font-bold uppercase tracking-tight text-white leading-[1.02] mb-10">
+          <h2 className="font-oswald text-[2.1rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84px] font-bold uppercase tracking-tight text-white leading-[1.02] mb-10">
             WE DON&apos;T JUST CREATE CONTENT.{" "}
             <span className="text-brand-accent block mt-1">
               WE CREATE ATTENTION.
@@ -55,7 +55,7 @@ export default function IntroStatement() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-8 border-l-2 border-brand-accent pl-6 md:pl-10"
+            className="lg:col-span-8 border-l-2 border-brand-accent pl-5 md:pl-10"
           >
             <p className="text-xl md:text-2xl text-foreground-muted font-light leading-relaxed mb-6">
               In an age of infinite digital scrolling, ordinary is invisible. At BrandEx Media, we fuse deep marketing intelligence with cinematic filmmaking and performance design to build brands that command market authority and captivate audiences.

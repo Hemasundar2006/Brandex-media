@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
                 // Client Endorsements
               </span>
             </div>
-            <h2 className="font-oswald text-5xl sm:text-7xl font-bold text-white uppercase tracking-tight">
+            <h2 className="font-oswald text-4xl sm:text-5xl md:text-7xl font-bold text-white uppercase tracking-tight">
               WHAT OUR <span className="text-brand-accent">CLIENTS SAY</span>
             </h2>
           </div>
@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Testimonial Active Display */}
-        <div className="relative glass-panel p-8 sm:p-14 md:p-18 rounded-[2.5rem] border border-white/15 shadow-2xl min-h-[340px] flex flex-col justify-between">
+        <div className="relative glass-panel p-6 sm:p-10 md:p-14 rounded-[2rem] sm:rounded-[2.5rem] border border-white/15 shadow-2xl min-h-[320px] sm:min-h-[340px] flex flex-col justify-between">
           <Quote className="w-16 h-16 text-brand-accent/20 absolute top-8 right-8 pointer-events-none" />
 
           <AnimatePresence mode="wait">
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Quote Body */}
-              <blockquote className="font-oswald text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-snug tracking-tight mb-8">
+              <blockquote className="font-oswald text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-normal leading-snug tracking-tight mb-8">
                 &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </blockquote>
 

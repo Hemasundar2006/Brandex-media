@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main className="w-full min-h-screen bg-background-outer text-white">
       {/* Header */}
-      <section className="relative w-full py-20 md:py-32 px-6 border-b border-white/5 overflow-hidden">
+      <section className="relative w-full py-16 md:py-32 px-4 sm:px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-mid/15 blur-[160px] pointer-events-none rounded-full" />
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -34,7 +34,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Grid: Details on Left, Form on Right */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Direct Channels & Studio Presence */}
           <div className="lg:col-span-5 space-y-8">
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <p className="text-sm text-white/70 font-mono leading-relaxed pl-15">
+              <p className="text-sm text-white/70 font-mono leading-relaxed pl-[52px]">
                 4-61-2, Lawsons Bay Colony, Pedda Waltair,
                 Visakhapatnam, Andhra Pradesh 530017
               </p>
@@ -123,7 +123,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Structured Project Enquiry Form */}
-          <div className="lg:col-span-7 glass-panel p-6 sm:p-10 md:p-12 rounded-[2.5rem] border border-white/15 shadow-2xl">
+          <div className="lg:col-span-7 glass-panel p-5 sm:p-8 md:p-12 rounded-[2rem] sm:rounded-[2.5rem] border border-white/15 shadow-2xl">
             <h2 className="font-oswald text-3xl sm:text-4xl font-bold uppercase text-white mb-2">
               Project Briefing Planner
             </h2>

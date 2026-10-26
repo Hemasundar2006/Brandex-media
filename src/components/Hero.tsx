@@ -56,7 +56,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[92vh] md:min-h-screen flex flex-col justify-between overflow-hidden pt-12"
+      className="hero-shell relative w-full min-h-[calc(100svh-5rem)] flex flex-col justify-between overflow-hidden pt-8"
     >
       {/* Cinematic Background Video with Parallax & Color Grading */}
       <motion.div
@@ -84,22 +84,23 @@ export default function Hero() {
           }}
         />
         {/* Layered Vignettes and Brand Ambient Glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background-outer/80 via-background-center/40 to-background-outer" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background-outer/70 via-background-center/35 to-background-outer" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,8,5,0.85)_100%)]" />
+        <div className="hero-grid absolute inset-0 opacity-40" />
       </motion.div>
 
       {/* Main Hero Typography & Call to Actions */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex-grow flex flex-col justify-center items-center text-center mt-8 md:mt-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 w-full flex-grow flex flex-col justify-center items-center text-center mt-4 md:mt-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col items-center max-w-5xl"
+          className="flex flex-col items-center max-w-6xl"
         >
           {/* Small Top Agency Tag */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/15 backdrop-blur-md mb-6"
+            className="eyebrow-chip mb-7"
           >
             <span className="w-2 h-2 rounded-full bg-brand-accent animate-ping" />
             <span className="text-[11px] md:text-xs font-mono uppercase tracking-[0.22em] text-white/90 font-medium">
@@ -110,7 +111,7 @@ export default function Hero() {
           {/* Confident Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-oswald text-[2.6rem] xs:text-5xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[124px] font-bold uppercase leading-[0.92] tracking-tight text-white mb-6 w-full"
+            className="font-oswald text-[3.2rem] sm:text-7xl md:text-8xl lg:text-[112px] xl:text-[138px] font-bold uppercase leading-[0.82] tracking-[-.06em] text-white mb-8 w-full text-balance"
           >
             <span>WE MAKE BRANDS </span>
             <span className="block mt-1">
@@ -129,7 +130,7 @@ export default function Hero() {
           {/* Supporting Statement */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed mb-10 px-2 sm:px-4"
+            className="text-sm sm:text-lg md:text-xl text-white/70 font-light max-w-2xl leading-relaxed mb-9 px-2 sm:px-4"
           >
             Strategy, cinematic content, and high-performance digital experiences built to help ambitious brands dominate their market.
           </motion.p>
@@ -141,7 +142,7 @@ export default function Hero() {
           >
             <Link
               href="#selected-work"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-accent text-background-outer font-oswald text-sm md:text-base uppercase tracking-widest font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(196,232,109,0.5)] active:scale-95"
+              className="button-primary group"
             >
               <span>Explore Our Work</span>
               <ArrowRight className="w-4 h-4" />
@@ -149,7 +150,7 @@ export default function Hero() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-oswald text-sm md:text-base uppercase tracking-widest font-bold flex items-center justify-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-brand-accent/50 active:scale-95"
+              className="button-secondary"
             >
               <span>Start a Project</span>
               <Sparkles className="w-4 h-4 text-brand-accent" />
@@ -159,7 +160,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down Trigger */}
-      <div className="relative z-10 flex flex-col items-center justify-center mb-6">
+      <div className="relative z-10 hidden md:flex flex-col items-center justify-center mb-6">
         <button
           suppressHydrationWarning
           onClick={scrollToExplore}
@@ -177,7 +178,7 @@ export default function Hero() {
       </div>
 
       {/* Capabilities Continuous Marquee Ticker */}
-      <div className="relative z-20 w-full bg-brand-accent text-background-outer py-3.5 overflow-hidden border-y border-brand-accent/40 shadow-[0_0_30px_rgba(196,232,109,0.2)]">
+      <div className="relative z-20 mx-auto mb-4 w-[calc(100%-2rem)] max-w-[1440px] rounded-2xl bg-brand-accent text-background-outer py-3 overflow-hidden border border-brand-accent/40 shadow-[0_0_30px_rgba(196,232,109,0.16)]">
         <motion.div
           className="flex whitespace-nowrap items-center gap-6 md:gap-10 font-oswald text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest select-none"
           animate={{ x: ["0%", "-50%"] }}

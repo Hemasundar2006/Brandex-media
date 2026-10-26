@@ -11,6 +11,7 @@ import Team from "@/components/Team";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import InsightsPreview from "@/components/InsightsPreview";
 import ContactForm from "@/components/ContactForm";
+import GrowthCommand from "@/components/GrowthCommand";
 import { Sparkles, MapPin, Mail, Phone } from "lucide-react";
 
 export default function Home() {
@@ -21,7 +22,10 @@ export default function Home() {
       {/* 1. Cinematic Hero Section */}
       <Hero />
 
-      {/* 2. Brand Statement & Real Metrics */}
+      {/* 2. Unified growth engine */}
+      <GrowthCommand />
+
+      {/* 3. Brand Statement & Real Metrics */}
       <IntroStatement />
 
       {/* 3. Interactive Services Rows */}

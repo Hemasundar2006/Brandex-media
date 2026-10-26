@@ -218,15 +218,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <ScrollProgress />
         <Header />
-        <div className="flex-grow pt-20 md:pt-24">{children}</div>
+        <div className="flex-grow pt-20">{children}</div>
         <Footer />
         <QuickContactDock />
 
         {/* Mobile Sticky CTA Bar */}
-        <div className="lg:hidden fixed bottom-4 left-0 w-full px-4 z-40 pointer-events-none">
+        <div className="hidden">
           <Link
             href="/contact"
-            className="pointer-events-auto w-full bg-brand-accent text-background-outer font-oswald uppercase tracking-widest font-bold py-3.5 px-6 rounded-2xl flex items-center justify-between shadow-[0_10px_30px_rgba(0,0,0,0.6),0_0_25px_rgba(196,232,109,0.35)] border border-brand-accent active:scale-95 transition-transform text-sm"
+            className="pointer-events-auto w-full bg-brand-accent text-background-outer font-oswald uppercase tracking-[.14em] font-bold py-3 px-5 rounded-full flex items-center justify-between shadow-[0_10px_30px_rgba(0,0,0,0.6),0_0_25px_rgba(196,232,109,0.25)] border border-brand-accent active:scale-[.98] transition-transform text-[11px]"
           >
             <span>Start a Project with BrandEx</span>
             <div className="w-8 h-8 rounded-xl bg-background-outer text-brand-accent flex items-center justify-center">
